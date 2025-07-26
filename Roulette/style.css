@@ -1,0 +1,218 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1b1b1b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #ffcb05;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+/* Game container layout */
+.game-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Betting panel */
+.betting-panel {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #000;
+  width: 500px;
+}
+
+.betting-panel label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.betting-panel select,
+.betting-panel input {
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #444;
+  color: white;
+}
+
+/* Roulette wheel */
+.roulette-container {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+}
+
+canvas#roulette {
+  border: 10px solid #333;
+  border-radius: 50%;
+  background-color: green;
+}
+
+/* Arrow indicator */
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 480px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid white;
+  z-index: 10;
+}
+
+/* Bet section */
+.bet-grid {
+  margin-top: 20px;
+}
+
+.color-bets {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.color-bet {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.color-bet:hover {
+  transform: scale(1.05);
+}
+
+.color-bet[data-color="red"] {
+  background-color: #e74c3c;
+}
+
+.color-bet[data-color="black"] {
+  background-color: #000;
+}
+
+.color-bet[data-color="green"] {
+  background-color: #00ff00;
+  color: #000;
+}
+
+/* Pokémon selection */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  font-size: 14px;
+}
+
+.pokemon-tile {
+  padding: 10px;
+  background-color: #444;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.pokemon-tile:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-tile.selected {
+  outline: 2px solid #ffd700;
+}
+
+/* Spin button */
+button#spin-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 18px;
+  background: linear-gradient(145deg, #ff0000, #cc0000);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button#spin-button:hover {
+  background: linear-gradient(145deg, #cc0000, #990000);
+  transform: scale(1.05);
+}
+
+#result-text {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffcb05;
+}
+
+/* Roulette container positioning */
+#wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+/* Back to Casino button */
+.back-button {
+  display: inline-block;
+  margin: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(145deg, #c0392b, #e74c3c);
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.3s ease;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background: linear-gradient(145deg, #e74c3c, #ff6b6b);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.back-button:active {
+  transform: scale(0.97);
+  background: linear-gradient(145deg, #c0392b, #a93226);
+}

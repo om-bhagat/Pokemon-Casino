@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon Blackjack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="game-table">
+  <h1>Pokémon Blackjack</h1>
+
+  <p id="player-coins">Coins: 100</p>
+
+  <label for="bet">Place your bet:</label>
+  <input type="number" id="bet" placeholder="Enter your bet" min="1">
+
+  <div id="dealer-cards">
+    <h3>Dealer's Hand:</h3>
+    <div class="hand-value"></div>
+    <div class="hand-container"></div>
+  </div>
+
+  <div id="player-cards">
+    <h3>Your Hand:</h3>
+    <div class="hand-value"></div>
+    <div class="hand-container"></div>
+  </div>
+
+  <p id="message"></p>
+
+  <div id="buttons">
+    <button id="play-button">Deal</button>
+    <button id="hit-button">Hit</button>
+    <button id="stand-button">Stand</button>
+  </div>
+
+            <a href="../index.html" class="back-button">← Back to Casino</a>
+  <script src="script.js"></script>
+  </div>
+</body>
+</html>

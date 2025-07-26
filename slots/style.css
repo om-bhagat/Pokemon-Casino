@@ -1,0 +1,195 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: url('images/casino-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 40px;
+    color: gold;
+    text-shadow: 2px 2px 10px red;
+    margin-bottom: 20px;
+}
+
+#slot-machine {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: 1a1a1a;
+    border: 6px solid gold;
+    border-radius: 20px;
+    box-shadow: 0 0 20px gold;
+    width: fit-content;
+}
+
+.reel {
+    width: 120px;
+    height: 120px;
+    border: 4px solid #ccc;
+    margin: 0 10px;
+    border-radius: 12px;
+    background-color: #ffffffcc;
+    box-shadow: inset 0 0 10px #00000088;
+    overflow: hidden;
+}
+
+.reel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+.spin {
+    animation: flicker 0.1s infinite alternate;
+}
+#spin-button {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px 40px;
+    margin-top: 20px;
+    background: radial-gradient(circle, #ffe600, #ff9900);
+    border: 2px solid #cc6600;
+    border-radius: 10px;
+    box-shadow: 0 4px #b35900;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#spin-button:hover {
+    background: radial-gradient(circle, #fff94c, #ffcc00);
+    transform: scale(1.05);
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+}
+@keyframes spin {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-25%); }
+    50% { transform: translateY(25%); }
+    75% { transform: translate(-15%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes flicker {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+@keyframes jackpot-flash {
+    0%, 100% { background-color: white; }
+    25% { background-color: gold; }
+    50%{ background-color: red; }
+    75% { background-color: yellow; }
+}
+
+.jackpot { 
+    animation: jackpot-flash 0.1s infinite;
+}
+
+@keyframes coin-fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+    100% { transform: translateY(300px) rotate(720deg); opacity: 1; }
+}
+
+.coin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('images/coin.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: fall 2.5s linear forwards;
+    pointer-events: none;
+}
+
+#coin-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.reel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.stop-button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ef476f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+.stop-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#coin-count {
+    font-size: 22px;
+    color: #ffeb3b;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px #000;
+}
+
+@keyframes fall {
+    0% {
+        transofrm: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.back-button {
+  display: inline-block;
+  margin: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(145deg, #c0392b, #e74c3c);
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.3s ease;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background: linear-gradient(145deg, #e74c3c, #ff6b6b);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.back-button:active {
+  transform: scale(0.97);
+  background: linear-gradient(145deg, #c0392b, #a93226);
+}

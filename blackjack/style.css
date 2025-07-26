@@ -1,0 +1,204 @@
+body {
+    background: url('images/felt-texture.png') no-repeat center;
+    background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background-color: #35654d;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.hearts { color: red; }
+.diamonds{ color: orange; }
+.clubs { color: green; }
+.spades { color: purple; }
+
+.top, .bottom {
+    font-size: 14px;
+}
+
+.middle {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: gold;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+#message {
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.card.hidden {
+    background: url('images/card-back.png') no-repeat center;
+    background-size: cover;
+    border: none;
+}
+
+.hand {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card {
+  width: 100px;
+  height: 140px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  font-weight: bold;
+}
+
+
+.hand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.card .top,
+.card .middle,
+.card .bottom {
+    font-size: 18px;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.card-pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+}
+
+.poke-icon {
+    width: 30px;
+    height: auto;
+}
+
+#game-table {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0,.6);
+    border: 5px solid gold;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+}
+
+
+.card.hearts, .card.diamonds {
+    color: red;
+}
+.card.spades, .card.clubs {
+    color: black;
+}
+
+.poke-icon {
+    width: 25px;
+    height: 25px;
+}
+
+#dealer-cards, #player-cards {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#dealer-cards h3, #player-cards h3 {
+    font-size: 1.5 rem;
+    color: gold;
+}
+
+#player-coins {
+    font-size: 1.25rem;
+    color: lightyellow;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card.face-card {
+    transform: scale(1.25);
+    z-index: 2;
+    border: 3px solid gold;
+    box-shadow: 0 0 10px gold;
+}
+
+.card.face-card .poke-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.back-button {
+  display: inline-block;
+  margin: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(145deg, #c0392b, #e74c3c);
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.3s ease;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background: linear-gradient(145deg, #e74c3c, #ff6b6b);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.back-button:active {
+  transform: scale(0.97);
+  background: linear-gradient(145deg, #c0392b, #a93226);
+}

@@ -1,0 +1,96 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("images/casino-background.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Press Start 2P', cursive; /* or another Pokémon-style font */
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Background Overlay with sparkles */
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Header */
+.title {
+  font-size: 3.5rem;
+  margin: 2rem 0 0.5rem;
+  z-index: 1;
+  position: relative;
+  color: gold;
+  text-shadow: 0 0 10px #fcd34d, 0 0 30px #facc15;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* Game Menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* Game Cards */
+.game-card {
+  background: #1c1c1c;
+  border: 2px solid #333;
+  border-radius: 1.5rem;
+  padding: 2rem 3rem;
+  font-size: 1.7rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  width: 200px;
+}
+.game-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #facc15;
+  background: #2a2a2a;
+}
+
+/* Theming by Game Type */
+.roulette {
+  border-color: #f87171;
+}
+.blackjack {
+  border-color: #60a5fa;
+}
+.slots {
+  border-color: #a78bfa;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .game-card {
+    width: 80%;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}

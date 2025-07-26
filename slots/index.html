@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Pokemon Slots</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Pokemon Slot Machine</h1>
+
+        <div id="slot-machine">
+            <div class="reel-wrapper">
+                <div class="reel" id="reel1"><img src="images/7.png" alt="symbol" /></div>
+                <button class="stop-button" data-index="0" disabled>STOP</button>
+            </div>
+            <div class="reel-wrapper">
+                <div class="reel" id="reel2"><img src="images/cherry.png" alt="symbol" /></div>
+                <button class="stop-button" data-index="1" disabled>STOP</button>
+            </div>
+            <div class="reel-wrapper">
+                <div class="reel" id="reel3"><img src="images/pikachu.png" alt="symbol" /></div>
+                <button class="stop-button" data-index="2" disabled>STOP</button>
+            </div>
+        </div>
+
+        <p>Coins: <span id="coin-count">100</span></p>
+        <label for="bet-amount">Bet Amount:</label>
+        <input type="number" id="bet-amount" value="10" min="1" max="100" />
+        <button id ="spin-button"> SPIN </button>
+        <div id="coin-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999;"></div>
+            <a href="../index.html" class="back-button">← Back to Casino</a>
+        <p id="result"></p>
+        <script src="script3.js"></script>
+    </body>
+</html>
