@@ -19,26 +19,6 @@ Welcome to the **Pokémon Casino**, a browser-based Pokémon-themed casino exper
 - Spin and try to land matching Pokémon symbols like **Pikachu**, **Meowth**, or **Gengar**.
 - Earn coins based on the rarity and combination of matches.
 
-## 📁 Project Structure
-
-pokemon-casino/
-├── index.html # Main casino hub with links to each game
-├── style.css # Global styling for the casino
-├── /roulette # Pokémon Roulette game
-│ ├── index.html
-│ ├── roulette.js
-│ └── style.css
-├── /blackjack # Pokémon Blackjack game
-│ ├── index.html
-│ ├── blackjack.js
-│ └── style.css
-├── /slots # Pokémon Slot Machine game
-│ ├── index.html
-│ ├── slots.js
-│ └── style.css
-└── assets/ # Pokémon images, card sprites, sounds, etc.
-
-
 ## 🧩 Features
 
 - 🎨 **Themed UI**: Each game features a dark-mode aesthetic with Pokémon-themed graphics and interactive buttons.
